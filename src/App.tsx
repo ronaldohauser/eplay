@@ -1,13 +1,16 @@
+/* eslint-disable prettier/prettier */
+import Banner from './componets/Banner'
 import Header from './componets/Header'
-import { GlobalCss, Container } from './styles'
+import { GlobalCss } from './styles'
 
 function App() {
   return (
     <>
       <GlobalCss />
-      <Container>
+      <div className='container'>
         <Header />
-      </Container>
+      </div>
+      <Banner />
     </>
   )
 }
