@@ -1,7 +1,16 @@
 /* eslint-disable prettier/prettier */
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Banner from './componets/Banner'
 import Header from './componets/Header'
 import { GlobalCss } from './styles'
+
+const rotas = createBrowserRouter([
+  {
+    path: '/',
+    element: <Banner />
+  }
+])
 
 function App() {
   return (
@@ -10,7 +19,7 @@ function App() {
       <div className='container'>
         <Header />
       </div>
-      <Banner />
+      <RouterProvider router={rotas} />
     </>
   )
 }
